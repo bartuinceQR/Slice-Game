@@ -1,6 +1,7 @@
 using Platforms;
 using Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Gameplay
 {
@@ -172,12 +173,19 @@ namespace Gameplay
         public void EndGame()
         {
             _gameState = GameState.Over;
+            HUDManager.Instance.SetFail();
         }
 
         public void WinStage()
         {
             _gameState = GameState.Finished;
             player.SetState(PlayerState.Dancing);
+            HUDManager.Instance.SetSuccess();
+        }
+
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // TODO : make an actual restart and not a bozo button
         }
         
     

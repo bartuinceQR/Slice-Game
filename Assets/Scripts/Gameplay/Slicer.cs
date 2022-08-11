@@ -56,12 +56,14 @@ namespace Gameplay
                     if (isRight)
                     {
                         upperHullGameobject.AddComponent<Rigidbody>();
+                        upperHullGameobject.AddComponent<SelfDestruct>();
                         MakeItPhysical(lowerHullGameobject);
                         return lowerHullGameobject;
                     }
                     else
                     {
                         lowerHullGameobject.AddComponent<Rigidbody>();
+                        lowerHullGameobject.AddComponent<SelfDestruct>();
                         MakeItPhysical(upperHullGameobject);
                         return upperHullGameobject;
                     }
