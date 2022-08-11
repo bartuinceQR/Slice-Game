@@ -4,6 +4,7 @@ namespace Player
     {
         Waiting = 1,
         Running = 2,
-        Dancing = 3, //a.k.a finished
+        Finalising = 3,
+        Dancing = 4, //a.k.a finished
     }
 }

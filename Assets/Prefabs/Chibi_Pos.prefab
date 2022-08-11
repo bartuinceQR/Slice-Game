@@ -79,6 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  modelAnimator: {fileID: 7951425424532785838}
+  followTarget: {fileID: 9150178382783131249}
+  dieSound: {fileID: 8300000, guid: 05d180130cf04304cbf26a0b5499e73c, type: 3}
 --- !u!1 &9150178382783131254
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,5 +173,10 @@ PrefabInstance:
 --- !u!4 &4087315312560869588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5646447060418037118, guid: 8ebf841af362818409cf000d8f1a2345, type: 3}
+  m_PrefabInstance: {fileID: 8567317845676955050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7951425424532785838 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1782327572533206788, guid: 8ebf841af362818409cf000d8f1a2345, type: 3}
   m_PrefabInstance: {fileID: 8567317845676955050}
   m_PrefabAsset: {fileID: 0}
