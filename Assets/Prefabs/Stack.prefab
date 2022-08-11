@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 1674903435569713544}
   - component: {fileID: 1674903435569713545}
   - component: {fileID: 1674903435569713546}
-  m_Layer: 0
-  m_Name: StartingStack
+  - component: {fileID: 1072535034349453540}
+  - component: {fileID: 551669082027467252}
+  m_Layer: 3
+  m_Name: Stack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,3 +99,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1072535034349453540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674903435569713548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13684494e8c131f4b9439c943da0c65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &551669082027467252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674903435569713548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474fd8373c7b4a84db1ac3e9924470d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

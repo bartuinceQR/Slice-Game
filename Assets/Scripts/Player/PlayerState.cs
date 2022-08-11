@@ -1,6 +1,9 @@
-public enum PlayerState
+namespace Player
 {
-    Waiting = 1,
-    Running = 2,
-    Dancing = 3, //a.k.a finished
+    public enum PlayerState
+    {
+        Waiting = 1,
+        Running = 2,
+        Dancing = 3, //a.k.a finished
+    }
 }

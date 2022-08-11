@@ -1,29 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+namespace Player
 {
-    private Rigidbody _rigidbody;
-    private PlayerState _playerState;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerMove : MonoBehaviour
     {
-        _rigidbody = GetComponent<Rigidbody>();
-        _playerState = PlayerState.Waiting;
-    }
+        private Rigidbody _rigidbody;
+        private PlayerState _playerState;
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        switch (_playerState)
+        [SerializeField] private float speed;
+    
+        // Start is called before the first frame update
+        void Start()
         {
-            case PlayerState.Running:
-                _rigidbody.AddForce(new Vector3(0, 0, 2f), ForceMode.Impulse);
-                break;
-            default:
-                break;
+            _rigidbody = GetComponent<Rigidbody>();
+            _playerState = PlayerState.Running;
+        }
+
+        // Update is called once per frame
+        void FixedUpdate()
+        {
+            switch (_playerState)
+            {
+                case PlayerState.Running:
+                    Vector3 temp = _rigidbody.velocity; //ignores gravity otherwise, not that THIS is particularly pretty
+                    temp.z = speed;
+                    _rigidbody.velocity = temp;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
